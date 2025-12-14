@@ -147,6 +147,11 @@ resource "aws_instance" "my_nexus_ec2" {
   }
 }
 
+resource "aws_key_pair" "my_key" {
+  key_name   = "elnimr"
+  public_key = file("./elnimr.pub")
+}
+
 resource "local_file" "ansible_inventory" {
   content = <<EOT
 [nexus]

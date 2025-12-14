@@ -139,10 +139,7 @@ resource "aws_route_table_association" "private_AZ2" {
   route_table_id = aws_route_table.private.id
 }
 
-resource "aws_key_pair" "my_key" {
-  key_name   = "elnimr"
-  public_key = file("/home/adel/elnimr.pub")
-}
+
 
 ###########EKS###############
 
