@@ -149,7 +149,7 @@ resource "aws_instance" "my_nexus_ec2" {
 
 resource "local_file" "ansible_inventory" {
   content = <<EOT
-[nexus_server]
+[nexus]
 ${aws_instance.my_nexus_ec2.id} ansible_user=ubuntu ansible_connection=aws_ssm ansible_aws_ssm_bucket_name=solar-app-s3 ansible_aws_ssm_region=us-east-1
 EOT
   filename = "../ansible/nexus/inventory.ini"
