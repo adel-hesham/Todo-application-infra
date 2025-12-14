@@ -41,8 +41,12 @@
         dest: /nexus-ebs/
         remote_src: yes
     
-    - name: change the name of the extracted file
-      script: ./script2.sh
+    
+    - name: Rename Nexus directory
+      ansible.builtin.command: mv /nexus-ebs/nexus-3.83.2-01 /nexus-ebs/nexus
+      args:
+        creates: /nexus-ebs/nexus           # Won't run if this folder already exists
+        removes: /nexus-ebs/nexus-3.83.2-01 # Won't run if the source folder is missing
 
     - name: add nexus user
       user:
