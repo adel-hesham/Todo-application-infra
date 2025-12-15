@@ -11,6 +11,12 @@ pipeline {
             }
         }
         stage('Terraform Init & Plan') {
+            when {
+                anyOf {
+                    branch 'main'
+                    changeRequest()
+                }
+            }
             steps {
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding', 
