@@ -26,8 +26,6 @@ pipeline {
                 ]]) {
                 dir('terraform'){
                         sh 'terraform init'
-                        // forcing del lockedfile
-                        // sh 'terraform force-unlock -force f728a7d5-ffdc-8b74-dae4-fe49c3ed1b47'
                         sh 'terraform plan'
                     }
                 }
