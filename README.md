@@ -2,6 +2,10 @@
 
 This repository contains the **Terraform** configurations and **Ansible** playbooks required to provision and configure a production-ready, highly available cloud environment on **AWS**.
 
+## 🖼️ Infrastructure Architecture
+<img width="887" height="581" alt="image" src="https://github.com/user-attachments/assets/4e106b28-b23e-4db7-a656-b428f866cd7c" />
+
+
 ## 🏗️ Architecture Overview
 The infrastructure is designed for security and scalability:
 * **VPC Networking**: A custom VPC with a multi-AZ architecture featuring public and private subnets across two Availability Zones.
