@@ -39,19 +39,3 @@ Once Terraform provisions the hardware, the included **Ansible Playbook** automa
 * **Firewall Configuration**: Opens port `8081` via `ufw` to allow internal traffic.
 
 ---
-
-## 🚀 How to Deploy
-
-### 1. Provision Infrastructure
-Initialize Terraform and apply the configuration to create the AWS resources:
-```bash
-terraform init
-terraform apply -auto-approve
-```
-### 2. Configure Nexus
-
-Terraform automatically generates the inventory.ini file via a local_file resource. Once the infrastructure is ready, run the playbook:
-
-```bash
-ansible-playbook -i ../ansible/nexus/inventory.ini playbook.yml
-```
