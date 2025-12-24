@@ -7,10 +7,7 @@ pipeline {
             }
         }
         stage('Terraform Init & Plan') {
-            when {
-                anyOf {
-                    branch 'main'
-                    changeRequest()
+
                 }
             }
             steps {
@@ -28,8 +25,7 @@ pipeline {
             }
         }
         stage('Terraform Apply') {
-            when {
-                branch 'main'
+
             }
             steps {
                 withCredentials([[
@@ -47,8 +43,7 @@ pipeline {
             }
         }
         stage('Ansible Install Nexus') {
-            when {
-                branch 'main'
+
             }
             steps {
                 withCredentials([[
