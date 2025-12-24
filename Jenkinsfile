@@ -8,8 +8,7 @@ pipeline {
         }
         stage('Terraform Init & Plan') {
 
-                }
-            }
+           
             steps {
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding', 
@@ -25,8 +24,6 @@ pipeline {
             }
         }
         stage('Terraform Apply') {
-
-            }
             steps {
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding', 
@@ -44,7 +41,7 @@ pipeline {
         }
         stage('Ansible Install Nexus') {
 
-            }
+            
             steps {
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding', 
