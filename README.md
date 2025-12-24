@@ -40,6 +40,6 @@ Once Terraform provisions the hardware, the included **Ansible Playbook** automa
 * **Performance Tuning**: Optimizes JVM settings, specifically setting `MaxDirectMemorySize` to **2703m** and preferring the IPv4 stack.
 * **Persistence Configuration**: Reconfigures Nexus default properties to ensure all data and work directories reside on the persistent EBS mount.
 * **Service Management**: Creates and enables a `systemd` unit file to ensure Nexus starts automatically on boot.
-* **Firewall Configuration**: Opens port `8081` via `ufw` to allow internal traffic.
+* **Firewall Configuration**: Opens port `8081` via `ufw` to allow internal traffic. 
 
 ---
